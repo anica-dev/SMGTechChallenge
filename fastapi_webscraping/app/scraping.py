@@ -31,6 +31,3 @@ def scrape_website(url):
         return brands_list
     else:
         return {"error": f"Request failed, status code: {response.status_code}"}
-
-if __name__ == '__main__':
-    print(scrape_website("https://swissmarketplace.group/"))
