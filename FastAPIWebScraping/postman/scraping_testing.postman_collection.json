@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "5e1706f7-0aaf-4510-b191-49eeddf7501a",
+		"name": "scraping_testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49268112",
+		"_collection_link": "https://anica-dev-449045.postman.co/workspace/Team's-Workspace~22d0cb6e-4f97-46af-8e19-c1fdb6424584/collection/49268112-5e1706f7-0aaf-4510-b191-49eeddf7501a?action=share&source=collection_link&creator=49268112"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				},
+				"description": "Get all brands"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/?group=realestate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/?group=realestate",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "group",
+							"value": "realestate"
+						}
+					]
+				},
+				"description": "Get real estate group"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/?group=realestate&group=automotive",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/?group=realestate&group=automotive",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "group",
+							"value": "realestate"
+						},
+						{
+							"key": "group",
+							"value": "automotive"
+						}
+					]
+				},
+				"description": "Get two groups"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/?exclude=generalmarketplaces",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/?exclude=generalmarketplaces",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "exclude",
+							"value": "generalmarketplaces"
+						}
+					]
+				},
+				"description": "Exclude group"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/?exclude=finance%26insurance",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/?exclude=finance%26insurance",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "exclude",
+							"value": "finance%26insurance"
+						}
+					]
+				},
+				"description": "Exclude group"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
